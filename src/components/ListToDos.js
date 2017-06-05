@@ -10,7 +10,7 @@ class ListToDos extends Component {
     return (
       <ol>
         {this.props.toDos.map((toDo, i) => {
-          return <li key={i}>{toDo} <a href="#" onClick={this.deleteToDo.bind(this, i)}>[X]</a></li>;
+          return <li key={i}>{toDo} <button onClick={this.deleteToDo.bind(this, i)}>X</button></li>;
         })}
       </ol>
     )
