@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AddProject from "./components/AddToDo";
+import ListToDos from "./components/ListToDos";
 import './App.css';
 
 class App extends Component {
@@ -19,10 +20,10 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.toDos);
     return (
       <div className="App">
         <AddProject />
+        <ListToDos toDos={this.state.toDos} />
       </div>
     );
   }
