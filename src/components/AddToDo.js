@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class AddProject extends Component {
+class AddToDo extends Component {
   render() {
     return (
       <div>
@@ -14,4 +14,4 @@ class AddProject extends Component {
   }
 }
 
-export default AddProject;
+export default AddToDo;
