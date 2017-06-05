@@ -27,11 +27,19 @@ class App extends Component {
     })
   }
 
+  handleDeleteToDo(indexToDelete) {
+    let toDos = this.state.toDos;
+    toDos.splice(indexToDelete, 1);
+    this.setState({
+      toDos: toDos
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <AddProject addToDo={this.handleNewToDo.bind(this)}/>
-        <ListToDos toDos={this.state.toDos} />
+        <ListToDos toDos={this.state.toDos} onDelete={this.handleDeleteToDo.bind(this)}/>
       </div>
     );
   }
