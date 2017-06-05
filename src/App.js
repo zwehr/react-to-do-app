@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import AddProject from "./components/AddToDo";
-import ListToDos from "./components/ListToDos";
+import AddProject from './components/AddToDo';
+import ListToDos from './components/ListToDos';
 import './App.css';
 
 class App extends Component {
@@ -19,10 +19,18 @@ class App extends Component {
   });
   }
 
+  handleNewToDo(toDo) {
+    let toDos = this.state.toDos;
+    toDos.push(toDo);
+    this.setState({
+      toDos: toDos
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <AddProject />
+        <AddProject addToDo={this.handleNewToDo.bind(this)}/>
         <ListToDos toDos={this.state.toDos} />
       </div>
     );
