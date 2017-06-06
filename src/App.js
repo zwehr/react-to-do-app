@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AddProject from './components/AddToDo';
 import ListToDos from './components/ListToDos';
+import Footer from './components/Footer';
 import './App.css';
 
 class App extends Component {
@@ -38,8 +39,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>To-Do App</h1>
         <AddProject addToDo={this.handleNewToDo.bind(this)}/>
         <ListToDos toDos={this.state.toDos} onDelete={this.handleDeleteToDo.bind(this)}/>
+        <Footer />
       </div>
     );
   }
