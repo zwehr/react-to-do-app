@@ -16,6 +16,7 @@ class AddToDo extends Component {
         newToDo: this.refs.toDo.value
       }, function() {
         this.props.addToDo(this.state.newToDo);
+        this.refs.toDo.value = "";
       })
     }
     e.preventDefault();
