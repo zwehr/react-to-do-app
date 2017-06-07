@@ -26,8 +26,8 @@ class AddToDo extends Component {
       <div>
         <h2>What do you need to do today?</h2>
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <input type="text" ref="toDo" placeholder="Enter a task here" />
-          <input type="submit" value="Add to list" />
+          <input className="user-text" type="text" ref="toDo" placeholder="Enter a task here" />
+          <input className="add-button" type="submit" value="+" />
         </form>
       </div>
     );

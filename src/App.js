@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import AddProject from './components/AddToDo';
 import ListToDos from './components/ListToDos';
 import Footer from './components/Footer';
-import './App.css';
 
 class App extends Component {
   constructor() {
@@ -13,11 +12,9 @@ class App extends Component {
   }
 
   componentWillMount() {
-    this.setState({toDos: [
-      "An example task. Click the 'X' to delete.",
-      "Example 2"
-    ]
-  });
+    this.setState({
+      toDos: ["An example task. Click the 'X' to delete."]
+    });
   }
 
   handleNewToDo(toDo) {
@@ -38,8 +35,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>To-Do App</h1>
+      <div className="app">
+        <h1>React To-Do</h1>
         <AddProject addToDo={this.handleNewToDo.bind(this)}/>
         <ListToDos toDos={this.state.toDos} onDelete={this.handleDeleteToDo.bind(this)}/>
         <Footer />
